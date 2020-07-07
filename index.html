@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="kharibyan">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -16,7 +17,6 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -26,182 +26,410 @@
 <body>
     <!-- CONTACT DETAILS BAR -->
 
-    <!-- <div class="container-fluid shadow-sm p-3 mb-3 bg-white"> -->
-    <div class="container">
-        <ul class="horizontal-list">
-            <li>
-                <i class="fa fa-envelope-o"></i> <a href="mailto:example@example.com">example@example.com</a>
-            </li>
-            <li>
-                <i class="fa fa-phone"></i> <a href="tel:+49012312345678">+49 0123 12345678</a>
-            </li>
-        </ul>
-    </div>
-
+    <header>
+        <!-- <div class="container-fluid shadow-sm p-3 mb-3 bg-white"> -->
+        <div class="container d-none d-lg-block py-2">
+            <div class="row justify-content-end text-right">
+                <!-- <ul class="row center justify-content-around"> -->
+                <div class="col-lg-3">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                    </svg>
+                    <a href="mailto:example@example.com">example@example.com</a>
+                </div>
+                <div class="col-lg-3">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3.925 1.745a.636.636 0 0 0-.951-.059l-.97.97c-.453.453-.62 1.095-.421 1.658A16.47 16.47 0 0 0 5.49 10.51a16.471 16.471 0 0 0 6.196 3.907c.563.198 1.205.032 1.658-.421l.97-.97a.636.636 0 0 0-.06-.951l-2.162-1.682a.636.636 0 0 0-.544-.115l-2.052.513a1.636 1.636 0 0 1-1.554-.43L5.64 8.058a1.636 1.636 0 0 1-.43-1.554l.513-2.052a.636.636 0 0 0-.115-.544L3.925 1.745zM2.267.98a1.636 1.636 0 0 1 2.448.153l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                    </svg>
+                    <a href="tel:+49012312345678">+49 0123 12345678</a>
+                </div>
+                <!-- </ul> -->
+            </div>
+        </div>
+    </header>
 
     <!-- HEADER IMAGE -->
-    <div class="jumbotron parallax" style="background-image: url('http://placehold.it/1900x1080');"></div>
+    <div class="jumbotron parallax mb-0" style="background-image: url('http://placehold.it/1900x1080');"></div>
 
-    <!-- NAVIGATION BAR (stick to top) -->
-    <nav class="navbar sticky-top navbar-light bg-white">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="nav-link" href="#">Home</a>
+    <!-- NAVBAR -->
+    <nav id="navbarMain" class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand d-md-none" href="#">Poject Name</a>
+            <button class="navbar-toggler ml-auto float-xs-right" type="button" data-toggle="collapse"
+                data-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Kurse
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Fachsprachprüfung</a>
-                    <a class="dropdown-item" href="#">Kenntnisprüfung</a>
-                </div>
+            <!-- <div class="collapse navbar-collapse justify-content-md-center" id="navbarMainNav"> -->
+            <div class="collapse navbar-collapse" id="navbarMainNav">
+                <ul id="navbarMainList" class="navbar-nav w-100 nav-justified">
+                    <li class="nav-item mx-3 active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownCourses" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Kurse</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownCourses">
+                            <a class="dropdown-item" href="#">Fachsprachprüfung</a>
+                            <a class="dropdown-item" href="#">Kenntnisprüfung</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Mein Beriech</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                </ul>
             </div>
-
-            <a class="nav-link" href="#">FAQ</a>
-            <a class="nav-link" href="#">Mein Bereich</a>
-            <a class="nav-link" href="#">Kontakt</a>
-
         </div>
     </nav>
 
-    <!-- ABOUT US 1 COLUMN -->
-    <div class="container">
-        <h1 class="heading-1"><span>Heading</span></h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Volutpat commodo sed
-            egestas egestas fringilla phasellus faucibus scelerisque eleifend. Nec dui nunc mattis enim ut tellus
-            elementum sagittis vitae. Felis donec et odio pellentesque. Sed faucibus turpis in eu mi bibendum. Tempus
-            imperdiet nulla malesuada pellentesque elit eget gravida cum. Nulla pellentesque dignissim enim sit amet
-            venenatis urna cursus. Risus commodo viverra maecenas accumsan lacus vel facilisis. Scelerisque eu ultrices
-            vitae auctor. Nibh sed pulvinar proin gravida hendrerit. Ut sem viverra aliquet eget sit amet tellus cras.
-            Accumsan lacus vel facilisis volutpat est velit.
-        </p>
-    </div>
-    <!-- 2 COURSE COLUMNS  -->
+    <main>
+        <!-- ABOUT US 1 COLUMN -->
+        <div class="container mt-5">
+            <h1 class="heading-1"><span>Ihre Fachspezialisten</span></h1>
+            <p class="mt-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Volutpat commodo
+                sed
+                egestas egestas fringilla phasellus faucibus scelerisque eleifend. Nec dui nunc mattis enim ut tellus
+                elementum sagittis vitae. Felis donec et odio pellentesque. Sed faucibus turpis in eu mi bibendum.
+                Tempus
+                imperdiet nulla malesuada pellentesque elit eget gravida cum. Nulla pellentesque dignissim enim sit amet
+                venenatis urna cursus. Risus commodo viverra maecenas accumsan lacus vel facilisis. Scelerisque eu
+                ultrices
+                vitae auctor. Nibh sed pulvinar proin gravida hendrerit. Ut sem viverra aliquet eget sit amet tellus
+                cras.
+                Accumsan lacus vel facilisis volutpat est velit.
+            </p>
+        </div>
 
-    <div class="container">
-        <h1 class="heading-1"><span>Heading</span></h1>
-        <div class="row">
-            <div class="col">
-                <h2>Heading</h2>
-                <p>
-                    Luctus accumsan tortor posuere ac ut. Vitae justo eget magna fermentum iaculis eu. Pulvinar neque
-                    laoreet suspendisse interdum consectetur libero. Rhoncus dolor purus non enim. Facilisi morbi tempus
-                    iaculis urna id volutpat lacus. Interdum posuere lorem ipsum dolor sit amet. Pellentesque sit amet
-                    porttitor eget dolor morbi non. Felis eget nunc lobortis mattis aliquam faucibus purus in. Purus sit
-                    amet luctus venenatis. Aliquet enim tortor at auctor urna. Nunc sed blandit libero volutpat sed cras
-                    ornare arcu. Suscipit tellus mauris a diam maecenas sed enim ut. Ut placerat orci nulla pellentesque
-                    dignissim enim. Neque laoreet suspendisse interdum consectetur libero.
-                </p>
-                <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
-            </div>
-            <div class="col">
-                <h2>Heading</h2>
-                <p>
-                    Luctus accumsan tortor posuere ac ut. Vitae justo eget magna fermentum iaculis eu. Pulvinar neque
-                    laoreet suspendisse interdum consectetur libero. Rhoncus dolor purus non enim. Facilisi morbi tempus
-                    iaculis urna id volutpat lacus. Interdum posuere lorem ipsum dolor sit amet. Pellentesque sit amet
-                    porttitor eget dolor morbi non. Felis eget nunc lobortis mattis aliquam faucibus purus in. Purus sit
-                    amet luctus venenatis. Aliquet enim tortor at auctor urna. Nunc sed blandit libero volutpat sed cras
-                    ornare arcu. Suscipit tellus mauris a diam maecenas sed enim ut. Ut placerat orci nulla pellentesque
-                    dignissim enim. Neque laoreet suspendisse interdum consectetur libero.
-                </p>
-                <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+        <!-- 2 COURSE COLUMNS  -->
+        <div class="container mt-5">
+            <h1 class="heading-1"><span>Unsere Kurse</span></h1>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h2>
+                        <svg width="2em" height="2em" enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+                            xml:space="preserve">
+                            <path d="M416.322,120.239c-4.142,0-7.5,3.358-7.5,7.5V464.42c0,0.285-0.231,0.516-0.516,0.516H143.774c-4.142,0-7.5,3.358-7.5,7.5
+                               c0,4.142,3.358,7.5,7.5,7.5h264.532c8.556,0,15.516-6.96,15.516-15.516V127.739C423.822,123.597,420.464,120.239,416.322,120.239z
+                               " />
+                            <path d="M440.37,32.064h-69.039L346.16,6.893C341.715,2.448,335.806,0,329.52,0H71.628c-8.556,0-15.516,6.96-15.516,15.516
+                               v448.903c0,8.556,6.96,15.516,15.516,15.516h16.548v16.548c0,8.556,6.96,15.516,15.516,15.516H440.37
+                               c8.556,0,15.516-6.96,15.516-15.516V47.581C455.886,39.025,448.926,32.064,440.37,32.064z M335.644,17.59l70.587,70.587H336.16
+                               c-0.285,0-0.516-0.231-0.516-0.516V17.59z M440.886,496.484c0,0.285-0.231,0.516-0.516,0.516H103.692
+                               c-0.285,0-0.516-0.231-0.516-0.516v-16.548h8.53c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5H71.628
+                               c-0.285,0-0.516-0.231-0.516-0.516V15.516c0-0.285,0.231-0.516,0.516-0.516h249.016v72.661c0,8.556,6.96,15.516,15.516,15.516
+                               h80.162c4.142,0,7.5-3.358,7.5-7.5v-1.375c0-6.285-2.448-12.195-6.893-16.64l-30.598-30.598h54.039
+                               c0.285,0,0.516,0.231,0.516,0.516V496.484z" />
+                            <path d="M205.189,85.679c-2.929-2.929-7.678-2.929-10.606,0l-42.429,42.429c-0.202,0.201-0.529,0.201-0.73,0l-16.914-16.914h13.02
+                               c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5h-19.79c-2.398,0-4.662,0.563-6.692,1.539l-4.037-4.037
+                               c-2.929-2.929-7.678-2.929-10.606,0c-2.929,2.929-2.929,7.678,0,10.606l5.896,5.896c-0.048,0.497-0.076,1.001-0.076,1.511v48.097
+                               c0,8.556,6.96,15.516,15.516,15.516h48.097c8.556,0,15.516-6.96,15.516-15.516V110.12l13.835-13.835
+                               C208.118,93.356,208.118,88.607,205.189,85.679z M176.354,159.807c0,0.285-0.231,0.516-0.516,0.516h-48.097
+                               c-0.285,0-0.516-0.231-0.516-0.516V125.12l13.593,13.593c3.025,3.025,6.998,4.538,10.972,4.538c3.973,0,7.946-1.513,10.971-4.538
+                               l13.593-13.593V159.807z" />
+                            <path d="M175.838,200.403h-48.097c-8.556,0-15.516,6.96-15.516,15.516v48.097c0,8.556,6.96,15.516,15.516,15.516h48.097
+                               c8.556,0,15.516-6.96,15.516-15.516v-48.097C191.354,207.364,184.394,200.403,175.838,200.403z M176.354,264.016
+                               c0,0.285-0.231,0.516-0.516,0.516h-48.097c-0.285,0-0.516-0.231-0.516-0.516v-48.097c0-0.285,0.231-0.516,0.516-0.516h48.097
+                               c0.285,0,0.516,0.231,0.516,0.516V264.016z" />
+                            <path d="M175.838,304.613h-48.097c-8.556,0-15.516,6.96-15.516,15.516v48.097c0,8.556,6.96,15.516,15.516,15.516h48.097
+                               c8.556,0,15.516-6.961,15.516-15.516v-48.097C191.354,311.573,184.394,304.613,175.838,304.613z M176.354,368.226
+                               c0,0.285-0.231,0.516-0.516,0.516h-48.097c-0.285,0-0.516-0.232-0.516-0.516v-48.097c0-0.285,0.231-0.516,0.516-0.516h48.097
+                               c0.285,0,0.516,0.231,0.516,0.516V368.226z" />
+                            <path d="M296.08,112.226h-72.145c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h72.145c4.142,0,7.5-3.358,7.5-7.5
+                               C303.58,115.584,300.222,112.226,296.08,112.226z" />
+                            <path d="M360.209,144.291H223.935c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h136.274c4.142,0,7.5-3.358,7.5-7.5
+                               C367.709,147.649,364.352,144.291,360.209,144.291z" />
+                            <path d="M296.08,216.436h-72.145c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h72.145c4.142,0,7.5-3.358,7.5-7.5
+                               C303.58,219.794,300.222,216.436,296.08,216.436z" />
+                            <path d="M360.209,248.5H223.935c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h136.274c4.142,0,7.5-3.358,7.5-7.5
+                               C367.709,251.858,364.352,248.5,360.209,248.5z" />
+                            <path d="M296.08,320.645h-72.145c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h72.145c4.142,0,7.5-3.358,7.5-7.5
+                               C303.58,324.003,300.222,320.645,296.08,320.645z" />
+                            <path d="M360.209,352.709H223.935c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h136.274c4.142,0,7.5-3.358,7.5-7.5
+                               C367.709,356.067,364.352,352.709,360.209,352.709z" />
+                        </svg>
+                        Fachsprachprüfung
+                    </h2>
+                    <p class="my-5">
+                        Luctus accumsan tortor posuere ac ut. Vitae justo eget magna fermentum iaculis eu. Pulvinar
+                        neque
+                        laoreet suspendisse interdum consectetur libero. Rhoncus dolor purus non enim. Facilisi morbi
+                        tempus
+                        iaculis urna id volutpat lacus. Interdum posuere lorem ipsum dolor sit amet. Pellentesque sit
+                        amet
+                        porttitor eget dolor morbi non. Felis eget nunc lobortis mattis aliquam faucibus purus in. Purus
+                        sit
+                        amet luctus venenatis. Aliquet enim tortor at auctor urna. Nunc sed blandit libero volutpat sed
+                        cras
+                        ornare arcu. Suscipit tellus mauris a diam maecenas sed enim ut. Ut placerat orci nulla
+                        pellentesque
+                        dignissim enim. Neque laoreet suspendisse interdum consectetur libero.
+                    </p>
+                    <p class="text-center"><a class="btn btn-primary float-md-right" href="#" role="button">Anmelden</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2>
+                        <svg width="2em" height="2em" viewBox="0 0 395.496 395.496" class="bi bi-pencil-square"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+
+                            <path
+                                d="M262.601,0c-12.291,0-23.965,5.533-35.253,10.878c-10.428,4.939-20.272,9.602-29.6,9.602
+                                    c-9.329,0-19.173-4.663-29.604-9.602C156.86,5.53,145.19,0,132.895,0C85.555,0,51.2,51.586,51.2,122.655
+                                    c0,32.01,7.27,98.475,20.743,158.597c16.985,75.803,37.492,114.241,60.952,114.241c16.814,0,23.419-28.911,33.642-80.015
+                                    c7.004-35.021,17.592-87.945,31.184-88.003c18.104,0.065,27.6,53.955,34.526,93.3c7.929,44.995,13.169,74.721,30.355,74.721
+                                    c55.419,0,81.695-218.849,81.695-272.841C344.296,51.582,309.934,0,262.601,0z M262.741,382.314
+                                    c-6.687-2.464-13.452-40.878-17.493-63.829c-9.015-51.18-18.34-104.103-47.527-104.209c-24.422,0.106-33.993,47.957-44.128,98.611
+                                    c-5.021,25.119-13.431,67.164-20.698,69.407c-35.929,0-68.492-186.914-68.492-259.639c0-63.423,28.805-109.452,68.492-109.452
+                                    c9.325,0,19.173,4.663,29.6,9.602c11.288,5.349,22.961,10.878,35.253,10.878s23.965-5.533,35.253-10.878
+                                    c10.428-4.939,20.275-9.602,29.6-9.602c39.687,0,68.492,46.029,68.492,109.452C331.093,195.376,298.527,382.293,262.741,382.314z" />
+
+                            <path
+                                d="M146.548,27.081c-33.877,0-61.44,27.563-61.44,61.44c0,3.768,3.058,6.827,6.827,6.827c3.768,0,6.827-3.058,6.827-6.827
+                                    c0-26.351,21.436-47.787,47.787-47.787c3.768,0,6.827-3.058,6.827-6.827C153.375,30.14,150.316,27.081,146.548,27.081z" />
+
+                        </svg>
+                        Kenntnisprüfung
+                    </h2>
+                    <p class="my-5">
+                        Luctus accumsan tortor posuere ac ut. Vitae justo eget magna fermentum iaculis eu. Pulvinar
+                        neque
+                        laoreet suspendisse interdum consectetur libero. Rhoncus dolor purus non enim. Facilisi morbi
+                        tempus
+                        iaculis urna id volutpat lacus. Interdum posuere lorem ipsum dolor sit amet. Pellentesque sit
+                        amet
+                        porttitor eget dolor morbi non. Felis eget nunc lobortis mattis aliquam faucibus purus in. Purus
+                        sit
+                        amet luctus venenatis. Aliquet enim tortor at auctor urna. Nunc sed blandit libero volutpat sed
+                        cras
+                        ornare arcu. Suscipit tellus mauris a diam maecenas sed enim ut. Ut placerat orci nulla
+                        pellentesque
+                        dignissim enim. Neque laoreet suspendisse interdum consectetur libero.
+                    </p>
+                    <p class="text-center"><a class="btn btn-primary float-md-right" href="#" role="button">Anmelden</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ABOUT US COLUMN WITH PHOTOS -->
-    <div class="container text-center">
-        <h1 class="heading-1"><span>Heading</span></h1>
+        <!-- ABOUT US COLUMN WITH PHOTOS -->
+        <div class="container text-center mt-5">
+            <h1 class="heading-1"><span>Über uns</span></h1>
 
-        <div class="row">
-            <div class="col">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                    aria-label="Placeholder: 140x140">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                        dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                    vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                    cursus magna.</p>
+            <div class="row mt-5">
+                <div class="col-md-4 mt-2">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480"
+                        style="enable-background:new 0 0 480 480;" xml:space="preserve" width="150px" height="150px">
 
-            </div>
-            <div class="col">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                    aria-label="Placeholder: 140x140">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                        dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                    vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                    cursus magna.</p>
+                        <path d="M240,0C107.664,0,0,107.664,0,240c0,57.96,20.656,111.184,54.992,152.704c0.088,0.12,0.096,0.272,0.192,0.384
+			c24.792,29.896,55.928,52.816,90.624,67.624c0.4,0.168,0.792,0.352,1.192,0.52c2.808,1.184,5.648,2.28,8.496,3.352
+			c1.12,0.424,2.24,0.856,3.376,1.264c2.456,0.88,4.928,1.712,7.416,2.512c1.592,0.512,3.184,1.016,4.792,1.496
+			c2.2,0.656,4.408,1.288,6.632,1.888c1.952,0.528,3.92,1.016,5.888,1.488c1.992,0.48,3.992,0.96,6,1.384
+			c2.24,0.48,4.504,0.904,6.776,1.32c1.824,0.336,3.64,0.688,5.48,0.984c2.52,0.408,5.056,0.728,7.6,1.056
+			c1.64,0.208,3.272,0.448,4.92,0.624c2.88,0.304,5.784,0.52,8.696,0.72c1.352,0.096,2.696,0.24,4.056,0.312
+			c4.248,0.24,8.544,0.368,12.872,0.368s8.624-0.128,12.888-0.352c1.36-0.072,2.704-0.216,4.056-0.312
+			c2.912-0.208,5.816-0.416,8.696-0.72c1.648-0.176,3.28-0.416,4.92-0.624c2.544-0.328,5.08-0.648,7.6-1.056
+			c1.832-0.296,3.656-0.648,5.48-0.984c2.264-0.416,4.528-0.84,6.776-1.32c2.008-0.432,4-0.904,6-1.384
+			c1.968-0.48,3.936-0.968,5.888-1.488c2.224-0.592,4.432-1.232,6.632-1.888c1.608-0.48,3.2-0.984,4.792-1.496
+			c2.488-0.8,4.96-1.632,7.416-2.512c1.128-0.408,2.248-0.84,3.376-1.264c2.856-1.072,5.688-2.176,8.496-3.352
+			c0.4-0.168,0.792-0.352,1.192-0.52c34.688-14.808,65.832-37.728,90.624-67.624c0.096-0.112,0.104-0.272,0.192-0.384
+			C459.344,351.184,480,297.96,480,240C480,107.664,372.336,0,240,0z M337.256,441.76c-0.12,0.056-0.232,0.12-0.352,0.176
+			c-2.856,1.376-5.76,2.672-8.688,3.936c-0.664,0.28-1.32,0.568-1.984,0.848c-2.56,1.072-5.152,2.088-7.76,3.064
+			c-1.088,0.408-2.176,0.808-3.272,1.192c-2.312,0.824-4.632,1.616-6.976,2.368c-1.456,0.464-2.92,0.904-4.384,1.336
+			c-2.08,0.624-4.168,1.224-6.28,1.784c-1.776,0.472-3.568,0.904-5.36,1.328c-1.88,0.448-3.752,0.904-5.648,1.304
+			c-2.072,0.44-4.16,0.816-6.24,1.192c-1.688,0.312-3.368,0.64-5.072,0.912c-2.344,0.368-4.712,0.664-7.072,0.96
+			c-1.496,0.192-2.984,0.416-4.496,0.576c-2.696,0.288-5.416,0.472-8.128,0.664c-1.208,0.08-2.408,0.216-3.632,0.28
+			c-3.96,0.208-7.928,0.32-11.912,0.32s-7.952-0.112-11.904-0.32c-1.216-0.064-2.416-0.192-3.632-0.28
+			c-2.72-0.184-5.432-0.376-8.128-0.664c-1.512-0.16-3-0.384-4.496-0.576c-2.36-0.296-4.728-0.592-7.072-0.96
+			c-1.704-0.272-3.384-0.6-5.072-0.912c-2.088-0.376-4.176-0.76-6.24-1.192c-1.896-0.4-3.776-0.856-5.648-1.304
+			c-1.792-0.432-3.584-0.856-5.36-1.328c-2.104-0.56-4.2-1.168-6.28-1.784c-1.464-0.432-2.928-0.872-4.384-1.336
+			c-2.344-0.752-4.672-1.544-6.976-2.368c-1.096-0.392-2.184-0.792-3.272-1.192c-2.608-0.976-5.2-1.992-7.76-3.064
+			c-0.664-0.272-1.312-0.56-1.976-0.84c-2.928-1.256-5.832-2.56-8.696-3.936c-0.12-0.056-0.232-0.112-0.352-0.176
+			c-27.912-13.504-52.568-32.672-72.576-55.952c15.464-56.944,59.24-102.848,115.56-121.112c1.112,0.68,2.272,1.288,3.416,1.928
+			c0.672,0.376,1.336,0.776,2.016,1.136c2.384,1.264,4.8,2.448,7.272,3.512c1.896,0.832,3.856,1.536,5.808,2.256
+			c0.384,0.136,0.768,0.288,1.152,0.424c10.848,3.84,22.456,6.04,34.6,6.04s23.752-2.2,34.592-6.04
+			c0.384-0.136,0.768-0.288,1.152-0.424c1.952-0.72,3.912-1.424,5.808-2.256c2.472-1.064,4.888-2.248,7.272-3.512
+			c0.68-0.368,1.344-0.76,2.016-1.136c1.144-0.64,2.312-1.248,3.432-1.936c56.32,18.272,100.088,64.176,115.56,121.112
+			C389.824,409.08,365.168,428.248,337.256,441.76z M152,176c0-48.52,39.48-88,88-88s88,39.48,88,88
+			c0,30.864-16.008,58.024-40.128,73.736c-3.152,2.048-6.432,3.88-9.8,5.48c-0.4,0.192-0.792,0.392-1.192,0.576
+			c-23.168,10.536-50.592,10.536-73.76,0c-0.4-0.184-0.8-0.384-1.192-0.576c-3.376-1.6-6.648-3.432-9.8-5.48
+			C168.008,234.024,152,206.864,152,176z M421.832,370.584c-18.136-53.552-59.512-96.832-112.376-117.392
+			C330.6,234.144,344,206.64,344,176c0-57.344-46.656-104-104-104s-104,46.656-104,104c0,30.64,13.4,58.144,34.552,77.192
+			c-52.864,20.568-94.24,63.84-112.376,117.392C31.672,333.792,16,288.704,16,240C16,116.488,116.488,16,240,16s224,100.488,224,224
+			C464,288.704,448.328,333.792,421.832,370.584z" />
+                    </svg>
 
-            </div>
-            <div class="col">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                    aria-label="Placeholder: 140x140">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                        dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                    vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                    cursus magna.</p>
-
-            </div>
-        </div>
-    </div>
-    <!-- 2 COLUMNS: RECHTLICHES UND KONTAKT -->
-    <footer>
-        <div class="container-fluid text-center">
-            <div class="row" style="padding-bottom: 50px;">
-                <div class="col" style="border:solid;">
-                    <h2>Rechtliches</h2>
-
-                    <a class="nav-link" href="#">Impressum</a>
-
-                    <a class="nav-link" href="#">AGB</a>
-
-                    <a class="nav-link" href="#">Datenschutzerklärung</a>
+                    <h2 class="mt-2">Dr. M. Haribyan</h2>
+                    <p class="mt-2">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                        id nibh
+                        ultricies
+                        vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent
+                        commodo
+                        cursus magna.</p>
 
                 </div>
-                <div class="col">
-                    <h2>Kontakt</h2>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col">
-                                <input type="text" class="form-control" placeholder="Name">
+                <div class="col-md-4 mt-2">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480"
+                        style="enable-background:new 0 0 480 480;" xml:space="preserve" width="150px" height="150px">
+
+                        <path d="M240,0C107.664,0,0,107.664,0,240c0,57.96,20.656,111.184,54.992,152.704c0.088,0.12,0.096,0.272,0.192,0.384
+			c24.792,29.896,55.928,52.816,90.624,67.624c0.4,0.168,0.792,0.352,1.192,0.52c2.808,1.184,5.648,2.28,8.496,3.352
+			c1.12,0.424,2.24,0.856,3.376,1.264c2.456,0.88,4.928,1.712,7.416,2.512c1.592,0.512,3.184,1.016,4.792,1.496
+			c2.2,0.656,4.408,1.288,6.632,1.888c1.952,0.528,3.92,1.016,5.888,1.488c1.992,0.48,3.992,0.96,6,1.384
+			c2.24,0.48,4.504,0.904,6.776,1.32c1.824,0.336,3.64,0.688,5.48,0.984c2.52,0.408,5.056,0.728,7.6,1.056
+			c1.64,0.208,3.272,0.448,4.92,0.624c2.88,0.304,5.784,0.52,8.696,0.72c1.352,0.096,2.696,0.24,4.056,0.312
+			c4.248,0.24,8.544,0.368,12.872,0.368s8.624-0.128,12.888-0.352c1.36-0.072,2.704-0.216,4.056-0.312
+			c2.912-0.208,5.816-0.416,8.696-0.72c1.648-0.176,3.28-0.416,4.92-0.624c2.544-0.328,5.08-0.648,7.6-1.056
+			c1.832-0.296,3.656-0.648,5.48-0.984c2.264-0.416,4.528-0.84,6.776-1.32c2.008-0.432,4-0.904,6-1.384
+			c1.968-0.48,3.936-0.968,5.888-1.488c2.224-0.592,4.432-1.232,6.632-1.888c1.608-0.48,3.2-0.984,4.792-1.496
+			c2.488-0.8,4.96-1.632,7.416-2.512c1.128-0.408,2.248-0.84,3.376-1.264c2.856-1.072,5.688-2.176,8.496-3.352
+			c0.4-0.168,0.792-0.352,1.192-0.52c34.688-14.808,65.832-37.728,90.624-67.624c0.096-0.112,0.104-0.272,0.192-0.384
+			C459.344,351.184,480,297.96,480,240C480,107.664,372.336,0,240,0z M337.256,441.76c-0.12,0.056-0.232,0.12-0.352,0.176
+			c-2.856,1.376-5.76,2.672-8.688,3.936c-0.664,0.28-1.32,0.568-1.984,0.848c-2.56,1.072-5.152,2.088-7.76,3.064
+			c-1.088,0.408-2.176,0.808-3.272,1.192c-2.312,0.824-4.632,1.616-6.976,2.368c-1.456,0.464-2.92,0.904-4.384,1.336
+			c-2.08,0.624-4.168,1.224-6.28,1.784c-1.776,0.472-3.568,0.904-5.36,1.328c-1.88,0.448-3.752,0.904-5.648,1.304
+			c-2.072,0.44-4.16,0.816-6.24,1.192c-1.688,0.312-3.368,0.64-5.072,0.912c-2.344,0.368-4.712,0.664-7.072,0.96
+			c-1.496,0.192-2.984,0.416-4.496,0.576c-2.696,0.288-5.416,0.472-8.128,0.664c-1.208,0.08-2.408,0.216-3.632,0.28
+			c-3.96,0.208-7.928,0.32-11.912,0.32s-7.952-0.112-11.904-0.32c-1.216-0.064-2.416-0.192-3.632-0.28
+			c-2.72-0.184-5.432-0.376-8.128-0.664c-1.512-0.16-3-0.384-4.496-0.576c-2.36-0.296-4.728-0.592-7.072-0.96
+			c-1.704-0.272-3.384-0.6-5.072-0.912c-2.088-0.376-4.176-0.76-6.24-1.192c-1.896-0.4-3.776-0.856-5.648-1.304
+			c-1.792-0.432-3.584-0.856-5.36-1.328c-2.104-0.56-4.2-1.168-6.28-1.784c-1.464-0.432-2.928-0.872-4.384-1.336
+			c-2.344-0.752-4.672-1.544-6.976-2.368c-1.096-0.392-2.184-0.792-3.272-1.192c-2.608-0.976-5.2-1.992-7.76-3.064
+			c-0.664-0.272-1.312-0.56-1.976-0.84c-2.928-1.256-5.832-2.56-8.696-3.936c-0.12-0.056-0.232-0.112-0.352-0.176
+			c-27.912-13.504-52.568-32.672-72.576-55.952c15.464-56.944,59.24-102.848,115.56-121.112c1.112,0.68,2.272,1.288,3.416,1.928
+			c0.672,0.376,1.336,0.776,2.016,1.136c2.384,1.264,4.8,2.448,7.272,3.512c1.896,0.832,3.856,1.536,5.808,2.256
+			c0.384,0.136,0.768,0.288,1.152,0.424c10.848,3.84,22.456,6.04,34.6,6.04s23.752-2.2,34.592-6.04
+			c0.384-0.136,0.768-0.288,1.152-0.424c1.952-0.72,3.912-1.424,5.808-2.256c2.472-1.064,4.888-2.248,7.272-3.512
+			c0.68-0.368,1.344-0.76,2.016-1.136c1.144-0.64,2.312-1.248,3.432-1.936c56.32,18.272,100.088,64.176,115.56,121.112
+			C389.824,409.08,365.168,428.248,337.256,441.76z M152,176c0-48.52,39.48-88,88-88s88,39.48,88,88
+			c0,30.864-16.008,58.024-40.128,73.736c-3.152,2.048-6.432,3.88-9.8,5.48c-0.4,0.192-0.792,0.392-1.192,0.576
+			c-23.168,10.536-50.592,10.536-73.76,0c-0.4-0.184-0.8-0.384-1.192-0.576c-3.376-1.6-6.648-3.432-9.8-5.48
+			C168.008,234.024,152,206.864,152,176z M421.832,370.584c-18.136-53.552-59.512-96.832-112.376-117.392
+			C330.6,234.144,344,206.64,344,176c0-57.344-46.656-104-104-104s-104,46.656-104,104c0,30.64,13.4,58.144,34.552,77.192
+			c-52.864,20.568-94.24,63.84-112.376,117.392C31.672,333.792,16,288.704,16,240C16,116.488,116.488,16,240,16s224,100.488,224,224
+			C464,288.704,448.328,333.792,421.832,370.584z" />
+                    </svg>
+                    <h2 class="mt-2">Dr. Y. Feridouni</h2>
+                    <p class="mt-2">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                        id nibh
+                        ultricies
+                        vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent
+                        commodo
+                        cursus magna.</p>
+
+                </div>
+                <div class="col-md-4 mt-2">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480"
+                        style="enable-background:new 0 0 480 480;" xml:space="preserve" width="150px" height="150px">
+
+                        <path d="M240,0C107.664,0,0,107.664,0,240c0,57.96,20.656,111.184,54.992,152.704c0.088,0.12,0.096,0.272,0.192,0.384
+        c24.792,29.896,55.928,52.816,90.624,67.624c0.4,0.168,0.792,0.352,1.192,0.52c2.808,1.184,5.648,2.28,8.496,3.352
+        c1.12,0.424,2.24,0.856,3.376,1.264c2.456,0.88,4.928,1.712,7.416,2.512c1.592,0.512,3.184,1.016,4.792,1.496
+        c2.2,0.656,4.408,1.288,6.632,1.888c1.952,0.528,3.92,1.016,5.888,1.488c1.992,0.48,3.992,0.96,6,1.384
+        c2.24,0.48,4.504,0.904,6.776,1.32c1.824,0.336,3.64,0.688,5.48,0.984c2.52,0.408,5.056,0.728,7.6,1.056
+        c1.64,0.208,3.272,0.448,4.92,0.624c2.88,0.304,5.784,0.52,8.696,0.72c1.352,0.096,2.696,0.24,4.056,0.312
+        c4.248,0.24,8.544,0.368,12.872,0.368s8.624-0.128,12.888-0.352c1.36-0.072,2.704-0.216,4.056-0.312
+        c2.912-0.208,5.816-0.416,8.696-0.72c1.648-0.176,3.28-0.416,4.92-0.624c2.544-0.328,5.08-0.648,7.6-1.056
+        c1.832-0.296,3.656-0.648,5.48-0.984c2.264-0.416,4.528-0.84,6.776-1.32c2.008-0.432,4-0.904,6-1.384
+        c1.968-0.48,3.936-0.968,5.888-1.488c2.224-0.592,4.432-1.232,6.632-1.888c1.608-0.48,3.2-0.984,4.792-1.496
+        c2.488-0.8,4.96-1.632,7.416-2.512c1.128-0.408,2.248-0.84,3.376-1.264c2.856-1.072,5.688-2.176,8.496-3.352
+        c0.4-0.168,0.792-0.352,1.192-0.52c34.688-14.808,65.832-37.728,90.624-67.624c0.096-0.112,0.104-0.272,0.192-0.384
+        C459.344,351.184,480,297.96,480,240C480,107.664,372.336,0,240,0z M337.256,441.76c-0.12,0.056-0.232,0.12-0.352,0.176
+        c-2.856,1.376-5.76,2.672-8.688,3.936c-0.664,0.28-1.32,0.568-1.984,0.848c-2.56,1.072-5.152,2.088-7.76,3.064
+        c-1.088,0.408-2.176,0.808-3.272,1.192c-2.312,0.824-4.632,1.616-6.976,2.368c-1.456,0.464-2.92,0.904-4.384,1.336
+        c-2.08,0.624-4.168,1.224-6.28,1.784c-1.776,0.472-3.568,0.904-5.36,1.328c-1.88,0.448-3.752,0.904-5.648,1.304
+        c-2.072,0.44-4.16,0.816-6.24,1.192c-1.688,0.312-3.368,0.64-5.072,0.912c-2.344,0.368-4.712,0.664-7.072,0.96
+        c-1.496,0.192-2.984,0.416-4.496,0.576c-2.696,0.288-5.416,0.472-8.128,0.664c-1.208,0.08-2.408,0.216-3.632,0.28
+        c-3.96,0.208-7.928,0.32-11.912,0.32s-7.952-0.112-11.904-0.32c-1.216-0.064-2.416-0.192-3.632-0.28
+        c-2.72-0.184-5.432-0.376-8.128-0.664c-1.512-0.16-3-0.384-4.496-0.576c-2.36-0.296-4.728-0.592-7.072-0.96
+        c-1.704-0.272-3.384-0.6-5.072-0.912c-2.088-0.376-4.176-0.76-6.24-1.192c-1.896-0.4-3.776-0.856-5.648-1.304
+        c-1.792-0.432-3.584-0.856-5.36-1.328c-2.104-0.56-4.2-1.168-6.28-1.784c-1.464-0.432-2.928-0.872-4.384-1.336
+        c-2.344-0.752-4.672-1.544-6.976-2.368c-1.096-0.392-2.184-0.792-3.272-1.192c-2.608-0.976-5.2-1.992-7.76-3.064
+        c-0.664-0.272-1.312-0.56-1.976-0.84c-2.928-1.256-5.832-2.56-8.696-3.936c-0.12-0.056-0.232-0.112-0.352-0.176
+        c-27.912-13.504-52.568-32.672-72.576-55.952c15.464-56.944,59.24-102.848,115.56-121.112c1.112,0.68,2.272,1.288,3.416,1.928
+        c0.672,0.376,1.336,0.776,2.016,1.136c2.384,1.264,4.8,2.448,7.272,3.512c1.896,0.832,3.856,1.536,5.808,2.256
+        c0.384,0.136,0.768,0.288,1.152,0.424c10.848,3.84,22.456,6.04,34.6,6.04s23.752-2.2,34.592-6.04
+        c0.384-0.136,0.768-0.288,1.152-0.424c1.952-0.72,3.912-1.424,5.808-2.256c2.472-1.064,4.888-2.248,7.272-3.512
+        c0.68-0.368,1.344-0.76,2.016-1.136c1.144-0.64,2.312-1.248,3.432-1.936c56.32,18.272,100.088,64.176,115.56,121.112
+        C389.824,409.08,365.168,428.248,337.256,441.76z M152,176c0-48.52,39.48-88,88-88s88,39.48,88,88
+        c0,30.864-16.008,58.024-40.128,73.736c-3.152,2.048-6.432,3.88-9.8,5.48c-0.4,0.192-0.792,0.392-1.192,0.576
+        c-23.168,10.536-50.592,10.536-73.76,0c-0.4-0.184-0.8-0.384-1.192-0.576c-3.376-1.6-6.648-3.432-9.8-5.48
+        C168.008,234.024,152,206.864,152,176z M421.832,370.584c-18.136-53.552-59.512-96.832-112.376-117.392
+        C330.6,234.144,344,206.64,344,176c0-57.344-46.656-104-104-104s-104,46.656-104,104c0,30.64,13.4,58.144,34.552,77.192
+        c-52.864,20.568-94.24,63.84-112.376,117.392C31.672,333.792,16,288.704,16,240C16,116.488,116.488,16,240,16s224,100.488,224,224
+        C464,288.704,448.328,333.792,421.832,370.584z" />
+                    </svg>
+                    <h2 class="mt-2">Dr. E. Altun</h2>
+                    <p class="mt-2">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                        id nibh
+                        ultricies
+                        vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent
+                        commodo
+                        cursus magna.</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 2 COLUMNS: RECHTLICHES UND KONTAKT -->
+    <footer>
+        <div class="container-fluid mt-5 mb-2">
+            <div class="row">
+                <div class="text-center col-md-6 order-md-2">
+                    <div class="bg-light">
+                        <h2 class="pt-5">Kontakt</h2>
+                        <form class="py-5 px-4 footer-padding">
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group col">
+                                    <input type="text" class="form-control" placeholder="E-Mail-Adresse">
+                                </div>
                             </div>
-                            <div class="form-group col">
-                                <input type="text" class="form-control" placeholder="E-Mail-Adresse">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Betreff">
                             </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                    placeholder="Geben Sie hier Ihre Nachricht ein..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Einreichen</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center col-md-6 order-md-1">
+                    <div class="bg-light" style="height: 100%;">
+                        <h2 class="pt-5">Rechtliches</h2>
+                        <div class="py-5">
+                            <a class="nav-link" href="#">Impressum</a>
+                            <a class="nav-link" href="#">AGB</a>
+                            <a class="nav-link" href="#">Datenschutzerklärung</a>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Betreff">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                placeholder="Geben Sie hier Ihre Nachricht ein..."></textarea>
-                        </div>
-                        <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Einreichen</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
