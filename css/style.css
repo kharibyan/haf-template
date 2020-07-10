@@ -13,10 +13,6 @@
     z-index: 999;
 }
 
-.main-content {
-    font-size: 18px!important;
-}
-
 @media only screen and (min-width: 768px) {
     .stick-to-top+.main-content {
         padding-top: 60px;
@@ -70,4 +66,16 @@
 .dropdown-bubble .dropdown-menu:after {
     top: -.5em;
     border-bottom-color: #fff;
+}
+
+.font-16 {
+    font-size: 16px!important;
+}
+
+.font-17 {
+    font-size: 17px!important;
+}
+
+.font-18 {
+    font-size: 18px!important;
 }

@@ -68,3 +68,23 @@ function toggleBrandIcons() {
     else
         $('#brandIcons').addClass('hidden')
 }
+
+let currentFont = 17
+
+function font16() {
+    $('main').removeClass('font-' + currentFont)
+    $('main').addClass('font-16')
+    currentFont = 16
+}
+
+function font17() {
+    $('main').removeClass('font-' + currentFont)
+    $('main').addClass('font-17')
+    currentFont = 17
+}
+
+function font18() {
+    $('main').removeClass('font-' + currentFont)
+    $('main').addClass('font-18')
+    currentFont = 18
+}
