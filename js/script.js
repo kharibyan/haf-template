@@ -3,21 +3,14 @@ const $navbarList = $('#navbarList')
 const $navbarBrand = $('#navbarBrand')
 const navbarInitialOffset = $navbarMain.offset().top
 
-const $dropdown = $(".dropdown")
-const $dropdownToggle = $(".dropdown-toggle")
-const $dropdownMenu = $(".dropdown-menu")
-const showClass = "show"
+const $dropdown = $('.dropdown')
+const $dropdownToggle = $('.dropdown-toggle')
+const $dropdownMenu = $('.dropdown-menu')
+const showClass = 'show'
 
 function justifyNavbar() {
-    let wWidth = $(window).width()
-
     // 768 is sm breakpoint of bootstrap
-    if (wWidth < 768) {
-        $navbarMain.addClass('stick-to-top shadow-sm')
-        $navbarBrand.addClass('hidden')
-        $navbarList.removeClass('nav-justified')
-        $dropdown.removeClass('dropdown-bubble')
-    } else {
+    if (this.matchMedia('(min-width: 768px)').matches) {
         if (window.pageYOffset >= navbarInitialOffset) {
             $navbarMain.addClass('stick-to-top shadow-sm')
             $navbarBrand.removeClass('hidden')
@@ -26,42 +19,49 @@ function justifyNavbar() {
             $navbarBrand.addClass('hidden')
         }
 
-        $dropdown.addClass('dropdown-bubble')
         $navbarList.addClass('nav-justified')
+    } else {
+        $navbarMain.addClass('stick-to-top shadow-sm')
+        $navbarBrand.addClass('hidden')
+        $navbarList.removeClass('nav-justified')
     }
 }
 
-$(document).ready(function () {
-    justifyNavbar()
-    console.log(jQuery._data($dropdown[0], "events"))
-    console.log(jQuery._data($dropdownToggle[0], "events"))
-    console.log(jQuery._data($dropdownMenu[0], "events"))
-})
-$(window).resize(justifyNavbar)
-$(window).scroll(justifyNavbar)
-
-$(window).on('load resize', function () {
+function justifyDropdown() {
     if (this.matchMedia('(min-width: 768px)').matches) {
+        $dropdown.addClass('dropdown-bubble')
         $dropdown.hover(
             function () {
                 const $this = $(this)
                 $this.addClass(showClass)
-                $this.find($dropdownToggle).attr("aria-expanded", "true")
+                $this.find($dropdownToggle).attr('aria-expanded', 'true')
                 $this.find($dropdownMenu).addClass(showClass)
             },
             function () {
                 const $this = $(this)
                 $this.removeClass(showClass)
-                $this.find($dropdownToggle).attr("aria-expanded", "false")
+                $this.find($dropdownToggle).attr('aria-expanded', 'false')
                 $this.find($dropdownMenu).removeClass(showClass)
             }
         )
     } else {
-        $dropdown.off("mouseenter mouseleave");
+        $dropdown.removeClass('dropdown-bubble')
+        $dropdown.off('mouseenter mouseleave')
     }
-})
+}
 
-// TEMPORARY !!!
+$(document).ready(function () {
+    justifyNavbar()
+    justifyDropdown()
+})
+$(window).resize(function () {
+    justifyNavbar()
+    justifyDropdown()
+})
+$(window).scroll(justifyNavbar)
+
+// ---------- TEMPORARY! ----------
+
 function toggleBrandIcons() {
     if ($('#brandIcons').hasClass('hidden'))
         $('#brandIcons').removeClass('hidden')
@@ -88,3 +88,5 @@ function font18() {
     $('main').addClass('font-18')
     currentFont = 18
 }
+
+// --------------------------------
