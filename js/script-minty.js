@@ -9,13 +9,18 @@ const $dropdownMenu = $('.dropdown-menu')
 const showClass = 'show'
 
 function justifyNavbar() {
+    const navHeight = $navbarMain.outerHeight()
     // 768px = sm breakpoint in bootstrap
     if (this.matchMedia('(min-width: 768px)').matches) {
-        if (window.pageYOffset >= navbarInitialOffset) {
+        if (window.pageYOffset >= navbarInitialOffset + navHeight) {
             $navbarMain.addClass('stick-to-top shadow-sm')
+            $navbarMain.css('top', '-' + navHeight + 'px')
+            $navbarMain.addClass('slide-in')
             $navbarBrand.removeClass('hidden')
         } else {
             $navbarMain.removeClass('stick-to-top shadow-sm')
+            $navbarMain.css('top', '')
+            $navbarMain.removeClass('slide-in')
             $navbarBrand.addClass('hidden')
         }
 

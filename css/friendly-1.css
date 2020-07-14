@@ -1,0 +1,122 @@
+.parallax {
+    background-image: url("../res/bg-2-1.jpg")!important;
+}
+
+.bg-primary {
+    background-color: #213159!important;
+}
+
+.bg-secondary {
+    background-color: #3d6098!important;
+}
+
+.bg-tetriary {
+    background-color: #f04b4c!important;
+}
+
+.bg-quaternary {
+    background-color: #f3f3f3!important;
+}
+
+.text-primary {
+    color: #213159!important;
+}
+
+.text-secondary {
+    color: #3d6098!important;
+}
+
+.text-tetriary {
+    color: #f04b4c!important;
+}
+
+.text-quaternary {
+    color: #f3f3f3!important;
+}
+
+.text-black {
+    color: black!important;
+}
+
+.text-white {
+    color: white!important;
+}
+
+.link-secondary {
+    color: #3d6098!important;
+}
+
+.link-secondary:hover {
+    color: #4369a7!important;
+}
+
+.link-black {
+    color: #213159!important;
+    /* color: black!important; */
+}
+
+.nav-link:hover .link-black, .nav-link:hover .link-red, .dropdown-item:hover .link-black, .link-black.active {
+    color: white!important;
+    background-color: #3d6098!important;
+    /* border-radius: 3px; */
+}
+
+.link-red {
+    color: white!important;
+    background-color: #f04b4c!important;
+}
+
+.border-secondary {
+    border-color: #3d6098!important;
+}
+
+.bg-header-secondary {
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(61, 96, 152, .5)!important; */
+    /* background: linear-gradient(110deg, rgba(61, 96, 152, .7) 10%, rgba(61, 96, 152, .3) 50%, rgba(61, 96, 152, .7) 90%); */
+    /* background: linear-gradient(110deg, rgba(72, 148, 208, .9) 0%, rgba(72, 148, 208, .5) 50%, rgba(72, 148, 208, .9) 100%); */
+    /* background: linear-gradient(110deg, rgba(33,49,89,.7) 0%, rgba(33,49,89,0.5) 50%, rgba(33,49,89,.7) 100%); */
+}
+
+.bg-quaternary {
+    background-color: #f3f3f3!important;
+    /* background-color: white!important; */
+}
+
+.heading-1 span {
+    color: black!important;
+    background: #f3f3f3!important;
+}
+
+.heading-decoration {
+    background-color: #f04b4c!important;
+    color: white!important;
+}
+
+.heading-decoration-2 {
+    background-color: white;
+    color: black!important;
+    /* color: #213159!important; */
+}
+
+.btn-secondary {
+    color: white!important;
+    background-color: #3d6098!important;
+    border-color: #3d6098;
+}
+
+.btn-secondary:hover {
+    background-color: #4369a7!important;
+}
+
+.form-control:focus {
+    border-color: rgba(61, 96, 152, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(61, 96, 152, 0.6);
+    outline: 0 none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(61, 96, 152, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+    /* "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 128, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+}
